@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-body{
-    background: #cbebd5ca;
-    display: block;
+html, body {
+    overflow-x: hidden;
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    padding: 0;
+    background: #cbebd5ca;
+font-family: "Poppins", sans-serif;
 }
+
+
 .navbar {
+    
     font-family: "Poppins", sans-serif;
      overflow: hidden;
  }
@@ -88,17 +92,17 @@ ul li a:active {
 
 .container{
     position: absolute;
-    top: 50%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1000px;
+    width: 900px;
     height: 600px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
 }
 
 .container .slide .item{
-    width: 200px;
+    width: 190px;
     height: 300px;
     position: absolute;
     top: 50%;
@@ -129,7 +133,7 @@ ul li a:active {
 }
 
 .slide .item:nth-child(3){
-    left: 50%;
+    left: 45%;
     cursor: pointer;
 }
 .slide .item:nth-child(3):active{
@@ -138,7 +142,7 @@ ul li a:active {
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .slide .item:nth-child(4){
-    left: calc(50% + 220px);
+    left: calc(45% + 220px);
     cursor: pointer;
 }
 .slide .item:nth-child(4):active{
@@ -147,7 +151,7 @@ ul li a:active {
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .slide .item:nth-child(5){
-    left: calc(50% + 440px);
+    left: calc(45% + 440px);
     cursor: pointer;
 }
 .slide .item:nth-child(5):active{
@@ -162,10 +166,10 @@ ul li a:active {
 .item .content{
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 90px;
     width: 300px;
     text-align: left;
-    color: #d2e8d8;
+    color: #fbfbf8;
     transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
@@ -176,7 +180,7 @@ ul li a:active {
 }
 
 .content .name{
-    font-size: 60px;
+    font-size: 54px;
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
@@ -205,7 +209,7 @@ ul li a:active {
 }
 .sous-rect1{
     position: relative;
-    height: 230px;
+    height: 235px;
     width: 50%;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(33, 201, 148, 0.724);
@@ -313,12 +317,17 @@ ul li a:active {
 
 .sous-rect4{
     position: relative;
-    height: 230px;
+    height: 250px;
     width: 50%;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(33, 201, 148, 0.724);
   background-color: #cbebd5ea; 
 }
+.sous-rect3 h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 .sous-rect4 h2{
     font-size: 2em;
     margin-bottom: 20px;
@@ -341,13 +350,104 @@ ul li a:active {
 .vedio2{
     position: absolute;
     left: 60%;
-  top: 10px;
+  top: 100px;
   
 }
+.Section4{
+    width: 100%;
+    position: absolute; 
+    top: 500PX;
+   
 
-.footer{
-
-    position: absolute;
-    top: 500px;
-    background-color: aqua;
 }
+.sous-rect5{
+    position: relative;
+    height: 500px;
+    width: 85%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(33, 201, 148, 0.724);
+  background-color: #cbebd5ea; 
+
+}
+
+
+.comparaision{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 1px;
+}
+.caracteristique{
+    position: absolute;
+    left :450px;
+}
+.footer{
+   display: flex;
+    position: absolute;
+    top: 1100px;
+    background-color: #575757;
+    width: 100%;
+}
+/*.contaner-logo{
+    display: flex;
+    row-gap: 20px;
+    position: absolute;
+    left:700px;
+}
+*/
+#logo2  {
+    width:100px;
+    height: 100px;
+    position: absolute;
+    left: 700px;
+    bottom: 200px;
+  
+}
+#ocp{
+    width:150px;
+    height: 100px;
+    position: absolute;
+    left: 850px;
+    bottom: 200px;
+
+}
+#youcode{
+    width:200px;
+    height: 100px;
+    position: absolute;
+    left: 750px;
+    bottom: 95px;
+
+}
+
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 20px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
