@@ -3,6 +3,7 @@
         <title></title>
         <link rel="stylesheet" href="Styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function redirectToSection(sectionId) {
                 document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
@@ -11,6 +12,7 @@
     </head>
     
     <body>
+        <div class="globale">
         <nav class="navbar">
             <ul class="navbar-menu">
                 <li><img src="images/logo.png" id="logo"></li>
@@ -25,8 +27,8 @@
                 </div>
                 <div class="item">
                     <div class="content">
-                        <div class="name">Bienvenue</div>
-                        <div class="des">Sur Notre Site Pour savoir Plus sur les plantes</div>
+                        <div class="name"><p>Bienvenue</p></div>
+                        <div class="des"><p>Sur Notre Site Pour savoir Plus sur les plantes</p></div>
                     </div>
                 </div>
                 
@@ -50,9 +52,9 @@
             <p>Les "mauvaises herbes" sont des plantes considérées comme indésirables dans un contexte donné, 
                 souvent dans les jardins, les pelouses, les cultures agricoles ou même dans les espaces naturels aménagés. Le terme "mauvaises herbes" est généralement subjectif et relatif à l'usage humain et à la gestion des terres.</br>
             </p>
-            <img class="mv" src="images/mauvaise-herbre.jpg">
+           <!-- <img class="mv" src="images/mauvaise-herbre.jpg">-->
         </div>
-        
+        <img class="mv" src="images/mauvaise-herbre.jpg">
         <div class="sous-rect2">
             <h2>  Adventice</h2>
             <p> Une adventice est une plante dont la croissance au jardin est considérée comme indésirable. D’une manière plus populaire, on parlerait de ‘mauvaises herbes’. Il peut donc s’agir de plantes endémiques, locales ou bien introduites par l’homme et dont le contrôle n’est plus possible à l’échelle nationale. </p>
@@ -68,13 +70,12 @@
            <div class="vedio">
             <video  controls>
                 <source src="images/vedio.mp4" type="video/mp4">
-            </video>
-            
+            </video>  
         </div>
     </div>
+
         </section>
     <section  id="Section3" class="Section3">
-
         <div class="sous-rect4">
             <h2>Dicotylédone</h2>
             <p>Les dicotylédones, ou dicots, sont une classe de plantes à fleurs (angiospermes) caractérisées par la présence de deux feuilles embryonnaires, ou cotylédons, dans la graine. Elles se distinguent des monocotylédones, qui n'ont qu'un seul cotylédon. </p>
@@ -86,17 +87,20 @@
                 <source src="images/comparision.mp4" type="video/mp4">
             </video>
         </div>
+        </section>
+
         <section class="Section4">
             <div class="sous-rect5">
                 <h2> comparaision </h2>
                 <img  class=" comparaision"src="images/comparision.jpg.png">
                 <div class="caracteristique">
-              <strong>cotylédon</strong>    :est la première feuille ou les premières feuilles qui apparaissent sur un embryon de plante. </br>
-              <strong>Les piéces florales</strong> :sont les différentes parties qui composent une fleur. Elles sont généralement organisées en verticilles concentriques, chaque verticille ayant une fonction spécifique dans la reproduction de la plante. </br>
-               <strong>feuilles</strong>  sont des organes végétatifs essentiels des plantes</br>
-              <strong>pollen</strong> :Le pollen est un élément crucial dans la reproduction des plantes à fleurs (angiospermes) et des gymnospermes. Il se compose de grains microscopiques produits par les étamines des fleurs (dans le cas des angiospermes) ou les cônes mâles (dans le cas des gymnospermes). </br>
-              <strong>Les faisceaux cribo-vasculaires</strong>: également appelés faisceaux vasculaires, sont des structures essentielles dans les plantes vasculaires, responsables du transport de l'eau, des nutriments et des produits de la photosynthèse à travers la plante.</br>
-               <strong>racines</strong> :sont des organes essentiels des plantes, principalement responsables de l'ancrage dans le sol</br>
+                <P>
+              <strong>cotylédon</strong>    :Les monocotylédones ont un seul cotylédon, tandis que les dicotylédones en ont deux. </br>
+              <strong>Les piéces florales</strong> :Le nombre de pièces florales chez les monocotylédones est un multiple de 3, tandis que chez les dicotylédones, il est un multiple de 4 ou 5. </br>
+               <strong>feuilles</strong>  Les nervures des feuilles des monocotylédones sont parallèles, tandis que celles des dicotylédones forment un réseau réticulé. </br>
+              <strong>Les faisceaux cribo-vasculaires</strong>: Les faisceaux cribo-vasculaires des monocotylédones sont dispersés de manière aléatoire dans la tige, tandis que ceux des dicotylédones sont organisés en un anneau autour de la tige.</br>
+               <strong>racines</strong> :Les monocotylédones ont généralement un système racinaire fasciculé avec de nombreuses racines fines de même taille, tandis que les dicotylédones ont un système racinaire pivotant avec une racine principale épaissie et des racines secondaires.</br>
+            </P>
                 </div>
                
             </div>
@@ -124,13 +128,16 @@
                     <div class="footer-col">
                       <h4 id="contacte">Cantact </h4>
                       <div class="social-links">
+                        
                         <img  class="fb" src="images/facebook.png">
-                        <img  class="insta" src="images/instagrame.jpg">
+                        </a>
+                        <img  class="insta" src="images/instagrame.png">
+                        <img class="link" src="images/linkedin.png">
                         
                       </div>
                     </div>
                     <div class="footer-col">
-                        <h4 id="les Spanseurs">les Spanseurs </h4>
+                        <h4 id="les Spanseurs">En collaboration Avec </h4>
                         <div class="contaner-logo" >
                             <img  id="logo2" src="images/motmir logo.png">
                             <img id="ocp" src="images/ocp.png">
@@ -140,6 +147,8 @@
                   </div>
                 </div>
             </footer>
+
+        </div>
    
     </body>
 </html>
