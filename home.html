@@ -8,17 +8,39 @@
             function redirectToSection(sectionId) {
                 document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
             }
+
+            document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+
+    function checkVisibility() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < triggerBottom) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check in case elements are already visible
+});
+
         </script>
     </head>
     
     <body>
-        <div class="globale">
+        
         <nav class="navbar">
             <ul class="navbar-menu">
                 <li><img src="images/logo.png" id="logo"></li>
-                <li><a href="#about"><i class="fas fa-info-circle"></i> A propos Nous</a></li>
-                <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
-                <li><a href="#contacte"><i class="fas fa-envelope"></i> Contact</a></li>  
+                <li><a href="#about"> A propos Nous</a></li>
+                <li><a href="#services"> Services</a></li>
+                <li><a href="#contacte"> Contact</a></li>  
             </nav>
            
         <div class="container">
@@ -27,8 +49,8 @@
                 </div>
                 <div class="item">
                     <div class="content">
-                        <div class="name"><p>Bienvenue</p></div>
-                        <div class="des"><p>Sur Notre Site Pour savoir Plus sur les plantes</p></div>
+                        <div class="name">Bienvenue</div>
+                        <div class="des">Sur Notre Site Pour savoir Plus sur les plantes</div>
                     </div>
                 </div>
                 
@@ -40,34 +62,34 @@
                 <button class="item" style="background-image: url(images/photo2.webp);" onclick="redirectToSection('Section3')">
 
                 </button>
-            
-            </div>
+           
+        </div>
         </div>
 
     
 
         <section id="Section1"  class="Section1">
-            <div class="sous-rect1">
+            <div class="sous-rect1 animate-on-scroll">
             <h2>Les mauvaises herbres </h2>
             <p>Les "mauvaises herbes" sont des plantes considérées comme indésirables dans un contexte donné, 
                 souvent dans les jardins, les pelouses, les cultures agricoles ou même dans les espaces naturels aménagés. Le terme "mauvaises herbes" est généralement subjectif et relatif à l'usage humain et à la gestion des terres.</br>
             </p>
            <!-- <img class="mv" src="images/mauvaise-herbre.jpg">-->
         </div>
-        <img class="mv" src="images/mauvaise-herbre.jpg">
-        <div class="sous-rect2">
+        <img class="mv animate-on-scroll" src="images/mauvaise-herbre.jpg">
+        <div class="sous-rect2 animate-on-scroll">
             <h2>  Adventice</h2>
             <p> Une adventice est une plante dont la croissance au jardin est considérée comme indésirable. D’une manière plus populaire, on parlerait de ‘mauvaises herbes’. Il peut donc s’agir de plantes endémiques, locales ou bien introduites par l’homme et dont le contrôle n’est plus possible à l’échelle nationale. </p>
         </div>
         </section>
 
         <section id="Section2" class="Section2">
-            <div class="sous-rect3">
+            <div class="sous-rect3 animate-on-scroll">
                 <h2>Monocotylédone</h2>
                 <p>Les monocotylédones sont une classe de plantes à fleurs (angiospermes) caractérisées par la présence d'une seule feuille embryonnaire, ou cotylédon, dans la graine. Elles se distinguent des dicotylédones, qui possèdent deux cotylédons.</p>
-                <img  class="mono"src="images/mono.jpg">
-                <img class="mono2" src="images/mono2.jpg">
-           <div class="vedio">
+                <img  class="mono animate-on-scroll"src="images/mono.jpg">
+                <img class="mono2 animate-on-scroll" src="images/mono2.jpg">
+           <div class="vedio animate-on-scroll">
             <video  controls>
                 <source src="images/vedio.mp4" type="video/mp4">
             </video>  
@@ -76,13 +98,13 @@
 
         </section>
     <section  id="Section3" class="Section3">
-        <div class="sous-rect4">
+        <div class="sous-rect4 animate-on-scroll">
             <h2>Dicotylédone</h2>
             <p>Les dicotylédones, ou dicots, sont une classe de plantes à fleurs (angiospermes) caractérisées par la présence de deux feuilles embryonnaires, ou cotylédons, dans la graine. Elles se distinguent des monocotylédones, qui n'ont qu'un seul cotylédon. </p>
-            <img  class="doci"src="images/doci.jpg">
-            <img class="doci2" src="images/doci2.jpg">
+            <img  class="doci animate-on-scroll"src="images/doci.jpg">
+            <img class="doci2 animate-on-scroll" src="images/doci2.jpg">
         </div>
-        <div class="vedio2">
+        <div class="vedio2 animate-on-scroll">
             <video width="400" controls>
                 <source src="images/comparision.mp4" type="video/mp4">
             </video>
@@ -90,10 +112,10 @@
         </section>
 
         <section class="Section4">
-            <div class="sous-rect5">
+            <div class="sous-rect5 animate-on-scroll">
                 <h2> comparaision </h2>
-                <img  class=" comparaision"src="images/comparision.jpg.png">
-                <div class="caracteristique">
+                <img  class=" comparaision animate-on-scroll"src="images/comparision.jpg.png">
+                <div class="caracteristique animate-on-scroll">
                 <P>
               <strong>cotylédon</strong>    :Les monocotylédones ont un seul cotylédon, tandis que les dicotylédones en ont deux. </br>
               <strong>Les piéces florales</strong> :Le nombre de pièces florales chez les monocotylédones est un multiple de 3, tandis que chez les dicotylédones, il est un multiple de 4 ou 5. </br>
@@ -106,14 +128,14 @@
             </div>
         </section>
 
-            <footer class="footer">
+            <footer class="footer animate-on-scroll">
                 <div class="row">
-                    <div class="footer-col">
+                    <div class="footer-col animate-on-scroll">
                       <h4 id="about">A propos Nous </h4>
                       <p>Toutes nos informations proviennent de spécialistes,</br> notamment Ahmed, ingénieur en Al Moutmir</p>
                       
                     </div>
-                    <div class="footer-col">
+                    <div class="footer-col animate-on-scroll">
                       <h4 id="services">Service</h4>
                       <ul>
                         <li><a href="#logo">Acceuil</a></li>
@@ -125,18 +147,18 @@
                       
                     </div>
                     
-                    <div class="footer-col">
+                    <div class="footer-col animate-on-scroll">
                       <h4 id="contacte">Cantact </h4>
                       <div class="social-links">
-                        
-                        <img  class="fb" src="images/facebook.png">
-                        </a>
-                        <img  class="insta" src="images/instagrame.png">
-                        <img class="link" src="images/linkedin.png">
-                        
+                        <ul >
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <!-- Ajoutez d'autres réseaux sociaux ici -->
+                        </ul>
                       </div>
                     </div>
-                    <div class="footer-col">
+                    <div class="footer-col animate-on-scroll">
                         <h4 id="les Spanseurs">En collaboration Avec </h4>
                         <div class="contaner-logo" >
                             <img  id="logo2" src="images/motmir logo.png">

@@ -1,26 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 html, body {
-    overflow-x: hidden;
+    overflow-x: hidden;/*pour annuler glissage horizontale*/
     margin: 0;
     padding: 0;
     background: #cbebd5ca;
-font-family: "Poppins", sans-serif;
-
-}
-.globale{
-
-    display: flex;
-}
-@media (max-width: 600px) {
-  .globale{
-    display: inline;
-  }
-    
-    }
-.navbar {
-    
     font-family: "Poppins", sans-serif;
-     overflow: hidden;
+}
+
+
+.navbar {  
+    font-family: "Poppins", sans-serif;
  }
  
  .navbar-menu {
@@ -30,6 +19,8 @@ font-family: "Poppins", sans-serif;
      display: flex;
      flex-wrap: wrap; /* Pour permettre le wrapping sur les petits écrans */
      justify-content:space-between;
+     position: relative;
+     z-index: 10;
  }
  
  .navbar-menu li {
@@ -100,20 +91,19 @@ ul li a:active {
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
     width: 70%;
-   
+
+    z-index: 1;
 }
+
 @media (max-width: 768px) {
     .navbar-menu {
         flex-direction: column;
         align-items: center;
     }
-
     .container {
         padding: 10px;
     }
 }
-
-
 
 .container .slide .item{
     width: 190px;
@@ -126,7 +116,9 @@ ul li a:active {
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
-    transition: 0.5s;      
+    transition: 0.5s;  
+    
+    z-index: 0;
 }
 
 .slide .item:nth-child(1),
@@ -139,13 +131,12 @@ ul li a:active {
     height: 100%;
 }
 
-@media(max-width:600px)
-{
-    
-}
+
 .slide .item:nth-child(3){
     left: 45%;
     cursor: pointer;
+    top: 20%;
+    animation: animate 1s ease-in-out 1 forwards;
 }
 .slide .item:nth-child(3):active{
     box-shadow:
@@ -155,6 +146,8 @@ ul li a:active {
 .slide .item:nth-child(4){
     left: calc(45% + 220px);
     cursor: pointer;
+    top: 20%;
+    animation: animate 1s ease-in-out 1 forwards;
 }
 .slide .item:nth-child(4):active{
     box-shadow:
@@ -164,6 +157,8 @@ ul li a:active {
 .slide .item:nth-child(5){
     left: calc(45% + 440px);
     cursor: pointer;
+    top: 20%;
+    animation: animate 1s ease-in-out 1 forwards;
 }
 .slide .item:nth-child(5):active{
     box-shadow:
@@ -172,7 +167,46 @@ ul li a:active {
 }
 
 /* here n = 0, 1, 2, 3,... */
+/* Media queries pour redimensionner les images tout en gardant leur position */
+@media (max-width: 1200px) {
+    .slide .item:nth-child(3) {
+        left: 40%;
+    }
+    .slide .item:nth-child(4) {
+        left: calc(40% + 180px);
+    }
+    .slide .item:nth-child(5) {
+        left: calc(40% + 360px);
+    }
+}
 
+@media (max-width: 900px) {
+    .slide .item:nth-child(3) {
+        left: 35%;
+    }
+    .slide .item:nth-child(4) {
+        left: calc(35% + 140px);
+    }
+    .slide .item:nth-child(5) {
+        left: calc(35% + 280px);
+    }
+}
+
+@media (max-width: 600px) {
+    .slide .item {
+        width: 20%;
+        height: 20%;
+    }
+    .slide .item:nth-child(3) {
+        left: 30%;
+    }
+    .slide .item:nth-child(4) {
+        left: calc(30% + 80px);
+    }
+    .slide .item:nth-child(5) {
+        left: calc(30% + 160px);
+    }
+}
 
 .item .content{
     position: absolute;
@@ -195,7 +229,7 @@ ul li a:active {
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
-    animation: animate 0s ease-in-out 1 forwards;
+    animation: animate 1s ease-in-out 1 forwards;
 }
 
 .content .des{
@@ -203,13 +237,13 @@ ul li a:active {
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
-    animation: animate 0s ease-in-out 0s 1 forwards;
+    animation: animate 1s ease-in-out 0s 1 forwards;
 }
 
 @keyframes animate {
     from{
-        opacity: 0;
-        transform: translate(0, 100px);
+        opacity: 0.5;
+        transform: translate(2, 100px);
         filter: blur(33px);
     }
     to{
@@ -226,8 +260,17 @@ ul li a:active {
     box-shadow: 5px 5px 15px rgba(33, 201, 148, 0.724);
   background-color: #cbebd5ea;
   overflow: hidden;
-  
  }
+ .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 .Section1 {
     width: 100%;
     position: absolute;
@@ -260,7 +303,10 @@ ul li a:active {
     width: 25%;
     left: 60%;
     top: 35%;
+    
 }
+
+
 .sous-rect2 {
     position: relative;
     height: 230px;
@@ -361,7 +407,7 @@ h2{
   background-color: #cbebd5ea; 
 }
 .comparaision{
-    width: 30%;
+    width: 36%;
     position: absolute;
     left: 1px;
 }
@@ -464,3 +510,8 @@ contaner-logo{
       width: 100%;
   }
   }
+   i{
+    position: absolute;
+    top :30%;
+    left: 40%;
+   }
